@@ -1,0 +1,18 @@
+public static void printsubseq(String que,String ans)
+{
+	if(que.length()==0)
+	{
+		System.out.println(ans);
+		co++;
+		return;
+	}
+	char ch=que.charAt(0);
+	String ros=que.substring(1);
+	printsubseq(ros, ans);
+	printsubseq(ros, ans+ch);
+}
+
+
+
+INPUTCODE:
+printsubseq("abc", " ");
