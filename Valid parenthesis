@@ -1,0 +1,14 @@
+public static void validparenthesis(int n, String ans,int open,int close)
+{
+	if(open==n&&close==n)
+	{
+		System.out.println(ans);
+		return;
+	}
+	if(open>n||close>n||close>open)
+	{
+		return;
+	}
+	validparenthesis(n,ans+ "(", open+1, close);
+	validparenthesis(n, ans+")", open, close+1);
+}
